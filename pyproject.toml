@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "qrextractor"
+version = "0.1.0"
+description = ""
+authors = ["Kevin H Wilson <khwilson@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "qrextractor", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.7"
+pyzbar = "^0.1.9"
+pillow = "^10.3.0"
+protobuf = "^5.26.1"
+pyqrcode = "^1.2.1"
+pypng = "^0.20220715.0"
+
+[tool.poetry.scripts]
+qrextractor = "qrextractor.cli:cli"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.23.0"
+ipdb = "^0.13.13"
+grpcio-tools = "^1.62.2"
+ruff = "^0.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
